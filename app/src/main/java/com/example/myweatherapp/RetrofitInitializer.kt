@@ -10,7 +10,7 @@ class RetrofitInitializer {
     fun getRetrofit() : Retrofit {
 
         //TODO put your URL
-        return Retrofit.Builder().baseUrl("api.openweathermap.org/data/2.5/weather")
+        return Retrofit.Builder().baseUrl("api.openweathermap.org/")
                 .addConverterFactory(GsonConverterFactory.create(GsonBuilder()
                 .registerTypeAdapter(Date::class.java, JsonDeserializer { json, typeOfT, context -> Date(json.asJsonPrimitive.asString.replace("\\D+".toRegex(), "").toLong()) }).create()))
                 .build()
