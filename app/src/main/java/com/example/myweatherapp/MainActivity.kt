@@ -13,8 +13,8 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
-    val CITY: String = "dhaka,bd"
-    val API: String = "8118ed6ee68db2debfaaa5a44c832918"
+    val lat: Double = -51.2146267
+    val lon: Double = -30.0392981
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         override fun doInBackground(vararg params: String?): String? {
             var response:String?
             try{
-                response = URL("https://api.openweathermap.org/data/2.5/weather?q=$CITY&units=metric&appid=$API").readText(
+                response = URL(ApiUrls.coordinates.format(lat.toString(), lon.toString())).readText(
                     Charsets.UTF_8
                 )
             }catch (e: Exception){
