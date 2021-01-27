@@ -107,9 +107,11 @@
 
                     <ImageView
                         android:layout_width="25dp"
-                        android:layout_height="25dp" />
-                    <!--                        android:src="@drawable/sunrise" android:tint="#FFFFFF"-->
-                    />
+                        android:layout_height="25dp"
+                        android:scaleType="centerCrop"
+                        android:scaleX="2"
+                        android:scaleY="2"
+                        android:src="@drawable/d01"/>
 
                     <Space
                         android:layout_width="wrap_content"
@@ -144,8 +146,10 @@
 
                     <ImageView
                         android:layout_width="25dp"
-                        android:layout_height="25dp" />
-                    <!--                        android:src="@drawable/sunset" android:tint="#FFFFFF"-->
+                        android:layout_height="25dp"
+                        android:scaleX="2"
+                        android:scaleY="2"
+                        android:src="@drawable/d02"
                     />
 
                     <Space
@@ -181,8 +185,10 @@
 
                     <ImageView
                         android:layout_width="25dp"
-                        android:layout_height="25dp" />
-                    <!--                        android:src="@drawable/wind" android:tint="#FFFFFF"-->
+                        android:layout_height="25dp"
+                        android:scaleX="2"
+                        android:scaleY="2"
+                        android:src="@drawable/d03"
                     />
 
                     <Space
@@ -225,8 +231,11 @@
 
                     <ImageView
                         android:layout_width="25dp"
-                        android:layout_height="25dp" />
-                    <!--                        android:src="@drawable/pressure" android:tint="#FFFFFF"/>-->
+                        android:layout_height="25dp"
+                        android:scaleX="2"
+                        android:scaleY="2"
+                        android:src="@drawable/d04"
+                        />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="5dp" />
@@ -260,8 +269,10 @@
 
                     <ImageView
                         android:layout_width="25dp"
-                        android:layout_height="25dp" />
-                    <!--                        android:src="@drawable/humidity" android:tint="#FFFFFF"/>-->
+                        android:layout_height="25dp"
+                        android:scaleX="2"
+                        android:scaleY="2"
+                        android:src="@drawable/d09"/>
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="5dp" />
@@ -295,8 +306,10 @@
 
                     <ImageView
                         android:layout_width="25dp"
-                        android:layout_height="25dp" />
-                    <!--                        android:src="@drawable/info" android:tint="#FFFFFF"/>-->
+                        android:layout_height="25dp"
+                        android:scaleX="2"
+                        android:scaleY="2"
+                        android:src="@drawable/d50"/>
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="5dp" />
