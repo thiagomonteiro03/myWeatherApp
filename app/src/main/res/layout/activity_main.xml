@@ -1,39 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_gradient"
+    android:background="@drawable/clear_sky_gradient"
     android:orientation="vertical">
 
     <RelativeLayout
         android:id="@+id/mainContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="visible"
-        android:padding="50dp">
-
-        <LinearLayout
-            android:id="@+id/addressContainer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/address"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="DHAKA, BD"
-                android:textSize="24dp" />
-
-            <TextView
-                android:id="@+id/updated_at"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="20 April 2012, 20:08 PM"
-                android:textSize="14dp" />
-        </LinearLayout>
+        android:padding="50dp"
+        android:visibility="visible">
 
         <LinearLayout
             android:id="@+id/overviewContainer"
@@ -43,12 +21,30 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="DHAKA, BD"
+                android:textSize="24dp" />
+
+            <TextView
                 android:id="@+id/status"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="Clear Sky"
+                android:textAlignment="center"
                 android:textSize="18dp" />
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_margin="40dp"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center"
+                android:src="@drawable/c"
+                app:tint="@color/white" />
 
             <TextView
                 android:id="@+id/temp"
@@ -56,8 +52,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="sans-serif-thin"
-                android:text="29°C"
-                android:textSize="90dp" />
+                android:text="29°c"
+                android:textSize="70dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -69,7 +65,7 @@
                     android:id="@+id/temp_min"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Min Temp: 05:05 AM" />
+                    android:text="Min Temp: 29ºc" />
 
                 <Space
                     android:layout_width="50dp"
@@ -79,15 +75,26 @@
                     android:id="@+id/temp_max"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Max Temp: 05:05 PM" />
+                    android:text="Max Temp: 29ºc" />
+
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/updated_at"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="20 April 2012, 20:08 PM"
+                android:textSize="14dp" />
+
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/detailsContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/overviewContainer"
+            android:layout_marginTop="50dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -109,9 +116,8 @@
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:scaleType="centerCrop"
-                        android:scaleX="2"
-                        android:scaleY="2"
-                        android:src="@drawable/d01"/>
+                        android:src="@drawable/c"
+                        app:tint="@color/white" />
 
                     <Space
                         android:layout_width="wrap_content"
@@ -149,8 +155,7 @@
                         android:layout_height="25dp"
                         android:scaleX="2"
                         android:scaleY="2"
-                        android:src="@drawable/d02"
-                    />
+                        android:src="@drawable/d02" />
 
                     <Space
                         android:layout_width="wrap_content"
@@ -186,10 +191,8 @@
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:scaleX="2"
-                        android:scaleY="2"
-                        android:src="@drawable/d03"
-                    />
+                        android:src="@drawable/wind"
+                        app:tint="@color/white" />
 
                     <Space
                         android:layout_width="wrap_content"
@@ -234,8 +237,8 @@
                         android:layout_height="25dp"
                         android:scaleX="2"
                         android:scaleY="2"
-                        android:src="@drawable/d04"
-                        />
+                        android:src="@drawable/d04" />
+
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="5dp" />
@@ -272,7 +275,8 @@
                         android:layout_height="25dp"
                         android:scaleX="2"
                         android:scaleY="2"
-                        android:src="@drawable/d09"/>
+                        android:src="@drawable/d09" />
+
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="5dp" />
@@ -309,7 +313,8 @@
                         android:layout_height="25dp"
                         android:scaleX="2"
                         android:scaleY="2"
-                        android:src="@drawable/d50"/>
+                        android:src="@drawable/d50" />
+
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="5dp" />
