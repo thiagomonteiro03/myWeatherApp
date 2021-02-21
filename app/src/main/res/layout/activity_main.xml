@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/clear_sky_gradient"
@@ -17,7 +22,6 @@
             android:id="@+id/overviewContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
             android:orientation="vertical">
 
             <TextView
@@ -65,7 +69,7 @@
                     android:id="@+id/temp_min"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Min Temp: 29ºc" />
+                    android:text="Min 29ºc" />
 
                 <Space
                     android:layout_width="50dp"
@@ -75,7 +79,7 @@
                     android:id="@+id/temp_max"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Max Temp: 29ºc" />
+                    android:text="Max 29ºc" />
 
             </LinearLayout>
 
@@ -93,8 +97,8 @@
             android:id="@+id/detailsContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingTop="50dp"
             android:layout_below="@+id/overviewContainer"
-            android:layout_marginTop="50dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -351,3 +355,5 @@
         android:text="Something went wrong"
         android:visibility="gone" />
 </RelativeLayout>
+
+</ScrollView>
